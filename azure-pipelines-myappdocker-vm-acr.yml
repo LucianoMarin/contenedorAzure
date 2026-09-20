@@ -59,7 +59,7 @@ stages:
                       echo "Docker ya está instalado."
                     fi
                   displayName: 'Verificar e Instalar Docker'
-                  failOnStderr: true
+                  failOnStderr: false
 
                 - script: |
                     # Autenticarse en Azure Container Registry utilizando nombre de usuario y contraseña
