@@ -4,11 +4,11 @@ trigger:
       - main
 
 variables:
-  VM_IP_PUBLICA: '20.25.219.171'  # Se debe colocar la IP pública de tu máquina virtual
+  VM_IP_PUBLICA: '130.131.5.204'  # Se debe colocar la IP pública de tu máquina virtual
   IMAGE_NAME: 'myapp-nginx-s4'  # Se debe colocar el Nombre de la imagen que será descargada desde ACR
-  ACR_NAME: 'myappdevopsgrupo5'  # Se debe colocar el Nombre de tu Azure Container Registry (ACR)
-  ACR_USERNAME: 'myappdevopsgrupo5'  # Se debe colocar el Nombre de usuario del ACR
-  ACR_PASSWORD: '9zh36k4stKyKpA0aQASCBDzUzecPAfkkNNMM60IgV33R6WO6C1L5JQQJ99CIACHrzpqEqg7NAAACAZCRxjbV'  # Se debe colocar la Contraseña del ACR
+  ACR_NAME: 'appdevopsgrupo5'  # Se debe colocar el Nombre de tu Azure Container Registry (ACR)
+  ACR_USERNAME: 'appdevopsgrupo5'  # Se debe colocar el Nombre de usuario del ACR
+  ACR_PASSWORD: '11r9AwRKBxeEo4jiyo2Uv1yd6OnUqTPvNnl1YMHiEbQPAyA7E5FuJQQJ99CIACHrzpqEqg7NAAACAZCRZcJg'  # Se debe colocar la Contraseña del ACR
 
 stages:
   - stage: Deploy
@@ -16,7 +16,7 @@ stages:
       - deployment: DeployToVM
         displayName: 'Deploy to VM'
         environment:
-          name: 'VM-DEVOPS-GRUPO5'  # Nombre del entorno configurado en Azure DevOps
+          name: 'VM_CONTENEDORES'  # Nombre del entorno configurado en Azure DevOps
           resourceType: VirtualMachine  # Especifica que se conecta a una máquina virtual
         strategy:
           runOnce:
